@@ -1,0 +1,61 @@
+.hero-btn {
+  padding: 10px 32px;
+  background: $accent-color;
+  font-family: Roboto;
+  font-style: normal;
+  @include font(700, 16px, 1.88);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: $white-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  outline: $accent-color;
+  cursor: pointer;
+}
+
+/*.gallery-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}*/
+
+.btn-flex:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+  @include font(500, 16px, 1.63);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  background: #f5f4fa;
+  color: $dark-color;
+  transition: background $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.hero-form-btn {
+  display: flex;
+  margin-left: 12px;
+}
+
+.form-btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

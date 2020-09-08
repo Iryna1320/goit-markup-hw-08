@@ -1,0 +1,73 @@
+.flexbox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.site-nav {
+  /*display: flex;*/
+  display: none;
+
+  .nav-link {
+    position: relative;
+    padding-bottom: 32px;
+    font-style: normal;
+    @include font(500, 14px, 1.14);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $dark-color;
+    transform: translateY(0);
+    transition: transform $duration $timing-function,
+      color $duration $timing-function;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    opacity: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: $accent-color;
+    transform: translateY(100%);
+  }
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: $accent-color;
+  opacity: 0;
+  transition: opacity $duration $timing-function;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  border-bottom: $accent-color;
+  opacity: 1;
+}
+
+.nav-link.current {
+  color: $accent-color;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}

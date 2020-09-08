@@ -1,0 +1,44 @@
+/*.no-padding {
+  padding-top: 0;
+}*/
+
+/*.work {
+  display: flex;
+}*/
+
+/*img {
+  display: block;
+  max-width: 100%;
+}*/
+
+.work-list {
+  position: relative;
+  /*width: calc((100% - 2 * 30px) / 3);*/
+
+  /* &:not(:last-child) {
+    margin-right: 30px;
+  }*/
+}
+
+.work-title {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  .title-box {
+    /*width: 370px;*/
+    max-width: 370px; //добавила
+    width: 100%; //добавила
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 24px 0 24px 0;
+    letter-spacing: 0.03em;
+    text-align: center;
+    background: $background-color;
+    color: $white-color;
+  }
+}

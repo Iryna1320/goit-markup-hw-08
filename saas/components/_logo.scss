@@ -1,0 +1,25 @@
+.log-ty {
+  padding: 24px 0 25px 0;
+  margin-right: 81px;
+  text-decoration: none;
+}
+
+.log-ty-fonts {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  @include font(700, 26px, 1.19);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo {
+  color: $accent-color;
+}
+
+.logotype {
+  color: $black-color;
+}
+
+.white-logo {
+  color: $white-color;
+}

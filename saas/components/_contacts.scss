@@ -1,0 +1,50 @@
+.contacts {
+  display: none;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+.contacts .contacts-link {
+  @include font(500, 14px, 1.14);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $primary-text-color;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contacts-mr:not(:last-child)
+/*.client-item:not(:last-child)*/ {
+  margin-right: 30px;
+}
+
+.contacts-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.address-contact-item {
+  margin-top: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.address-link {
+  font-style: normal;
+  @include font(400, 14px, 1.71);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $white-color;
+}
+
+.contact {
+  color: $cont-color;
+}

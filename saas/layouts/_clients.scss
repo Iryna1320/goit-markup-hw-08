@@ -1,0 +1,27 @@
+/*.client-list {
+  display: flex;
+}*/
+
+.client-link {
+  display: inline-flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  cursor: pointer;
+  transition: border $duration $timing-function, fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: $accent-color;
+}

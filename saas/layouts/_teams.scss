@@ -1,0 +1,54 @@
+/*.teams {
+  display: flex;
+}*/
+
+.teams-container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.teams-color {
+  background: #f5f4fa;
+}
+
+.teams-item {
+  /*width: calc((100% - 3 * 30px) / 4);*/
+  background: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  /*&:not(:last-child) {
+    margin-right: 30px;
+  }*/
+}
+
+.teams-view {
+  padding-top: 30px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-left: 32px;
+  align-items: center;
+  text-align: center;
+  margin-right: auto;
+}
+
+.teams-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  @include font(500, 16px, 1.19);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $dark-color;
+}
+
+.teams-profes {
+  margin-top: 0;
+  margin-bottom: 16px;
+  @include font(400, 16px, 1.19);
+  letter-spacing: 0.03em;
+}
