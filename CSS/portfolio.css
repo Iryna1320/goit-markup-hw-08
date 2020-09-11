@@ -386,7 +386,6 @@ template {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 2px solid tomato;
 }
 
 body {
@@ -419,8 +418,6 @@ img {
 }
 
 .container {
-  /*width: 1200px;*/
-  /*width: 100%;*/
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
