@@ -1,8 +1,19 @@
+@media screen and (max-width: 767px) {
+  .display-header {
+    display: none;
+  }
+}
+
 .contacts {
-  display: none;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include for-size(desktop) {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .contacts .contacts-link {
@@ -18,22 +29,39 @@
   }
 }
 
-.contacts-mr:not(:last-child)
-/*.client-item:not(:last-child)*/ {
+.contacts-mr:not(:last-child) {
   margin-right: 30px;
-}
 
-.contacts-icon {
-  vertical-align: middle;
-  margin-right: 10px;
-  fill: currentColor;
+  @include for-size(tablet-landscape) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .contacts-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    fill: currentColor;
+  }
 }
 
 .address-contact-item {
   margin-top: 0;
 
   &:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+  }
+
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 }
 

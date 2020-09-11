@@ -1,4 +1,11 @@
+@media screen and (max-width: 767px) {
+  .display-header {
+    display: none;
+  }
+}
+
 .flexbox {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -11,9 +18,11 @@
 }
 
 .site-nav {
-  /*display: flex;*/
-  display: none;
+  display: flex;
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   .nav-link {
     position: relative;
     padding-bottom: 32px;

@@ -11,14 +11,15 @@
 
   <body>
     <!--Шапка сайта-->
-    <!--<header class="page-header">
+    <header class="page-header">
       <div class="container flexbox">
         <nav class="navigation">
-          <a href="./portfolio.html" class="log-ty log-ty-fonts"
+          <a href="./index.html" class="log-ty log-ty-fonts"
             ><span class="logo">Web</span
             ><span class="logotype">Studio</span></a
           >
-          <ul class="site-nav list">
+
+          <ul class="site-nav list display-header">
             <li class="nav-item">
               <a href="./index.html" class="nav-link">Студия</a>
             </li>
@@ -32,7 +33,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="contacts list">
+        <ul class="contacts list display-header">
           <li class="contacts-mr">
             <a href="mailto:info@devstudio.com" class="contacts-link">
               <svg class="contacts-icon" width="16" height="12">
@@ -50,8 +51,70 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="close-menu"
+              href="./images/symbol-defs.svg#icon-close_40px"
+            ></use>
+            <use
+              class="menu"
+              href="./images/symbol-defs.svg#icon-menu_40px"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <ul class="mobile-menu-nav list">
+            <li class="mobile-menu-nav-item">
+              <a href="./index.html" class="mobile-menu-nav-link">Студия</a>
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu-nav-link current mobile-menu-nav-link-active"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a href="" class="mobile-menu-nav-link">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu-contacts list">
+            <li class="mobile-menu-contacts-mr">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu-contacts-link"
+              >
+                <svg class="mobile-menu-contacts-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-message"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="mobile-menu-contacts-mr">
+              <a href="tel:+380961111111" class="mobile-menu-contacts-link">
+                <svg class="mobile-menu-contacts-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>-->
+    </header>
 
     <main>
       <!--Галерея-->
@@ -74,12 +137,31 @@
             <li class="gallery-item">
               <a href="#" class="gallery-block">
                 <div class="gallery-box">
-                  <img
-                    src="./images/tehno.jpg"
-                    width="370"
-                    height="294"
-                    alt="ноутбук с открытым веб-сайтом"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/tehno.jpg 1x, ./images/tehno@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tehno2.jpg    1x,
+                        ./images/tablet/tehno2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/tehno3.jpg    1x,
+                        ./images/mobile/tehno3@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/tehno.jpg"
+                      class="gallery-picture"
+                      alt="ноутбук с открытым веб-сайтом"
+                    />
+                  </picture>
 
                   <p class="gallery-text">
                     Технокряк это современная площадка распространения
@@ -95,12 +177,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/poster.jpg"
-                  width="370"
-                  height="294"
-                  alt="постер с двумя баскетбольными игроками"
-                />
+                <picture>
+                  <source
+                    srcset="./images/poster.jpg 1x, ./images/poster@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/poster2.jpg    1x,
+                      ./images/tablet/poster2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/poster3.jpg    1x,
+                      ./images/mobile/poster3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/poster.jpg"
+                    class="gallery-picture"
+                    alt="постер с двумя баскетбольными игроками"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">
                     Постер New Orlean vs Golden Star
@@ -111,12 +212,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/seafood.jpg"
-                  width="370"
-                  height="294"
-                  alt="логотип ресторана"
-                />
+                <picture>
+                  <source
+                    srcset="./images/seafood.jpg 1x, ./images/seafood@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/seafood2.jpg    1x,
+                      ./images/tablet/seafood2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/seafood3.jpg    1x,
+                      ./images/mobile/seafood3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/seafood.jpg"
+                    class="gallery-picture"
+                    alt="логотип ресторана"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Ресторан Seafood</h1>
                   <p class="gallery-discription">Приложение</p>
@@ -125,12 +245,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/prime.jpg"
-                  width="370"
-                  height="294"
-                  alt="наушники"
-                />
+                <picture>
+                  <source
+                    srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/prime2.jpg    1x,
+                      ./images/tablet/prime2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/prime3.jpg    1x,
+                      ./images/mobile/prime3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/prime.jpg"
+                    class="gallery-picture"
+                    alt="наушники"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Проект Prime</h1>
                   <p class="gallery-discription">Маркетинг</p>
@@ -139,12 +278,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/boxes.jpg"
-                  width="370"
-                  height="294"
-                  alt="две коробки"
-                />
+                <picture>
+                  <source
+                    srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/boxes2.jpg    1x,
+                      ./images/tablet/boxes2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/boxes3.jpg    1x,
+                      ./images/mobile/boxes3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/boxes.jpg"
+                    class="gallery-picture"
+                    alt="две коробки"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Проект Boxes</h1>
                   <p class="gallery-discription">Приложение</p>
@@ -153,12 +311,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/comp.jpg"
-                  width="370"
-                  height="294"
-                  alt="монитор пк с открытым веб-сайтом"
-                />
+                <picture>
+                  <source
+                    srcset="./images/comp.jpg 1x, ./images/comp@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/comp2.jpg    1x,
+                      ./images/tablet/comp2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/comp3.jpg    1x,
+                      ./images/mobile/comp3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/comp.jpg"
+                    class="gallery-picture"
+                    alt="монитор пк с открытым веб-сайтом"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Inspiration has no Borders</h1>
                   <p class="gallery-discription">Веб-сайт</p>
@@ -167,12 +344,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/edition.jpg"
-                  width="370"
-                  height="294"
-                  alt="открытый журнал"
-                />
+                <picture>
+                  <source
+                    srcset="./images/edition.jpg 1x, ./images/edition@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/edition2.jpg    1x,
+                      ./images/tablet/edition2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/edition3.jpg    1x,
+                      ./images/mobile/edition3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/edition.jpg"
+                    class="gallery-picture"
+                    alt="открытый журнал"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Издание Limited Edition</h1>
                   <p class="gallery-discription">Дизайн</p>
@@ -181,12 +377,31 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/lab.jpg"
-                  width="370"
-                  height="294"
-                  alt="бирка с логотипом"
-                />
+                <picture>
+                  <source
+                    srcset="./images/lab.jpg 1x, ./images/lab@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/lab2.jpg    1x,
+                      ./images/tablet/lab2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/lab3.jpg    1x,
+                      ./images/mobile/lab3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/lab.jpg"
+                    class="gallery-picture"
+                    alt="бирка с логотипом"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Проект LAB</h1>
                   <p class="gallery-discription">Маркетинг</p>
@@ -195,12 +410,34 @@
             </li>
             <li class="gallery-item">
               <a href="#" class="gallery-block">
-                <img
-                  src="./images/business.jpg"
-                  width="370"
-                  height="294"
-                  alt="ноутбук с открытым веб-приложением"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/business.jpg    1x,
+                      ./images/business@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/business2.jpg    1x,
+                      ./images/tablet/business2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/business3.jpg    1x,
+                      ./images/mobile/business3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/business.jpg"
+                    class="gallery-picture"
+                    alt="ноутбук с открытым веб-приложением"
+                  />
+                </picture>
                 <div class="gallery-title-img">
                   <h1 class="gallery-title">Growing Business</h1>
                   <p class="gallery-discription">Приложение</p>
@@ -216,7 +453,7 @@
     <footer class="footer">
       <div class="container footer-flex">
         <div class="footer-box">
-          <a href="./index.html" class="box-size log-ty-fonts"
+          <a href="./index.html" class="log-ty-fonts"
             ><span class="logo">Web</span
             ><span class="white-logo">Studio</span></a
           >
@@ -240,9 +477,9 @@
             </ul>
           </address>
         </div>
-        <div class="footer-box">
+        <div class="footer-social">
           <span class="footer-color">Присоединяйтесь</span>
-          <ul class="social list box-size">
+          <ul class="social list box-size social-list-icons">
             <li class="social-item">
               <a
                 href="#"
@@ -294,7 +531,7 @@
 
         <form class="form-footer" autocomplete="off">
           <p class="footer-color">Подпишитесь на рассылку</p>
-          <div class="footer-flex">
+          <div class="footer-form-flex">
             <lable>
               <input
                 class="footer-form-input"
@@ -302,6 +539,7 @@
                 placeholder="E-mail"
               />
             </lable>
+
             <button class="hero-btn hero-form-btn" type="submit">
               Подписаться
               <svg class="footer-form-icon" width="24" height="24">
@@ -314,6 +552,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
     <script>
       (() => {

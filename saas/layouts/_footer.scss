@@ -2,36 +2,97 @@
   background: $footer-color;
 }
 
-.footer-flex {
-  /*display: flex;
-  align-items: baseline;*/
-  text-decoration: none;
+@include for-size(tablet-landscape) {
+  .footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    justify-content: space-between;
+  }
+}
+
+@include for-size(desktop) {
+  .footer-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 .footer-box {
-  padding: 60px 0;
-  /*width: 270px;*/
-  max-width: 270px; //добавила
-  width: 100%; //добавила
-  /*margin-right: 30px;*/
+  padding-top: 60px;
+  /*padding-bottom: 20px;*/
+  text-align: center;
+
+  @include for-size(tablet-landscape) {
+    padding-left: 76px;
+  }
+
+  @include for-size(desktop) {
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+  }
+}
+
+.footer-social {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  @include for-size(tablet-landscape) {
+    padding-right: 89px;
+    padding-bottom: 0;
+  }
+
+  @include for-size(desktop) {
+    width: 100%;
+    padding-right: 0;
+    text-align: left;
+  }
+}
+
+.form-footer {
+  padding-top: 0;
+  padding-bottom: 60px;
+  text-align: center;
+
+  @include for-size(tablet-landscape) {
+    padding-top: 60px;
+    padding-right: 152px;
+    padding-left: 166px;
+  }
+
+  @include for-size(desktop) {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: left;
+  }
 }
 
 .footer-color {
+  margin: 0;
   text-transform: uppercase;
   color: $white-color;
 }
 
 .box-size {
-  display: flex;
   margin-top: 20px;
   text-decoration: none;
+
+  /*@include for-size(desktop) {
+    display: flex;
+    justify-content: start;
+  }*/
 }
 
 .footer-form-input {
-  /*width: 358px;*/
-  max-width: 358px; //добавила
+  max-width: 450px;
   width: 100%; //добавила
   height: 50px;
+  margin: 20px 0;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -43,8 +104,25 @@
   border-radius: 4px;
   background-color: $footer-color;
   outline: 0;
+
+  @include for-size(desktop) {
+    width: 358px;
+    margin-bottom: 0;
+  }
 }
+
+/*.footer-thumb {
+  display: flex;
+  align-items: center;
+}*/
 
 .footer-form-icon {
   margin-left: 10px;
+}
+
+@include for-size(desktop) {
+  .footer-form-flex {
+    display: flex;
+    align-items: baseline;
+  }
 }

@@ -10,14 +10,15 @@
 
   <body>
     <!--Шапка сайта-->
-    <!--<header class="page-header">
+    <header class="page-header">
       <div class="container flexbox">
         <nav class="navigation">
           <a href="./portfolio.html" class="log-ty log-ty-fonts"
             ><span class="logo">Web</span
             ><span class="logotype">Studio</span></a
           >
-          <ul class="site-nav list">
+
+          <ul class="display-header site-nav list">
             <li class="nav-item">
               <a href="./index.html" class="nav-link current active">Студия</a>
             </li>
@@ -29,7 +30,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="contacts list">
+        <ul class="contacts list display-header">
           <li class="contacts-mr">
             <a href="mailto:info@devstudio.com" class="contacts-link">
               <svg class="contacts-icon" width="16" height="12">
@@ -47,20 +48,82 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="close-menu"
+              href="./images/symbol-defs.svg#icon-close_40px"
+            ></use>
+            <use
+              class="menu"
+              href="./images/symbol-defs.svg#icon-menu_40px"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <ul class="mobile-menu-nav list">
+            <li class="mobile-menu-nav-item">
+              <a
+                href="./index.html"
+                class="mobile-menu-nav-link current mobile-menu-nav-link-active"
+                >Студия</a
+              >
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a href="./portfolio.html" class="mobile-menu-nav-link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu-nav-item">
+              <a href="" class="mobile-menu-nav-link">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu-contacts list">
+            <li class="mobile-menu-contacts-mr">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu-contacts-link"
+              >
+                <svg class="mobile-menu-contacts-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-message"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="mobile-menu-contacts-mr">
+              <a href="tel:+380961111111" class="mobile-menu-contacts-link">
+                <svg class="mobile-menu-contacts-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>-->
+    </header>
 
     <main>
       <!--Герой-->
-      <!--<section class="hero overlay">
-        <div>
-          <h1 class="hero-title">
-            Эффективные решения <br />
-            для вашего бизнеса
-          </h1>
-          <button class="hero-btn" data-modal-open>Заказать услугу</button>
-        </div>
-      </section>-->
+      <section class="hero overlay">
+        <h1 class="hero-title">
+          Эффективные решения<br />
+          для вашего бизнеса
+        </h1>
+        <button class="hero-btn" data-modal-open>Заказать услугу</button>
+      </section>
 
       <!--Преимущества-->
       <section class="section">
@@ -123,39 +186,92 @@
       </section>
 
       <!--Чем мы занимаемся-->
-      <!--<section class="section no-padding">
+      <section class="section no-padding display">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work list">
             <li class="work-list">
-              <img src="./images/desktop.jpg" width="370" height="294" alt="" />
+              <picture>
+                <source
+                  srcset="./images/desktop.jpg 1x, ./images/desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/desktop.jpg"
+                  width="370"
+                  height="294"
+                  alt=""
+                />
+              </picture>
               <div class="work-title">
                 <h3 class="title title-box">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
               </div>
             </li>
             <li class="work-list">
-              <img src="./images/mobile.jpg" width="370" height="294" alt="" />
+              <picture>
+                <source
+                  srcset="./images/mobile.jpg 1x, ./images/mobile@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/mobile.jpg"
+                  width="370"
+                  height="294"
+                  alt=""
+                />
+              </picture>
               <div class="work-title">
                 <h3 class="title title-box">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
               </div>
             </li>
             <li class="work-list">
-              <img src="./images/tablet.jpg" width="370" height="294" alt="" />
+              <picture>
+                <source
+                  srcset="./images/tablet.jpg 1x, ./images/tablet@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/tablet.jpg"
+                  width="370"
+                  height="294"
+                  alt=""
+                />
+              </picture>
               <div class="work-title">
                 <h3 class="title title-box">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
               </div>
             </li>
           </ul>
         </div>
-      </section>-->
+      </section>
 
       <!--Наша команда-->
       <section class="section teams-color">
-        <div class="container teams-container">
+        <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="teams list">
             <li class="teams-item">
-              <img src="./images/ihor.jpg" width="270" height="260" alt="" />
+              <picture>
+                <source
+                  srcset="./images/ihor.jpg 1x, ./images/ihor@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/ihor2.jpg    1x,
+                    ./images/tablet/ihor2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/ihor3.jpg    1x,
+                    ./images/mobile/ihor3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team-picture" src="./images/ihor.jpg" alt="" />
+              </picture>
               <div class="teams-view">
                 <h3 class="teams-title">Игорь Демьяненко</h3>
                 <p class="teams-profes">Product Designer</p>
@@ -218,7 +334,27 @@
               </div>
             </li>
             <li class="teams-item">
-              <img src="./images/olga1.jpg" width="270" height="260" alt="" />
+              <picture>
+                <source
+                  srcset="./images/olga.jpg 1x, ./images/olga@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/olga2.jpg    1x,
+                    ./images/tablet/olga2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/olga3.jpg    1x,
+                    ./images/mobile/olga3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team-picture" src="./images/olga.jpg" alt="" />
+              </picture>
               <div class="teams-view">
                 <h3 class="teams-title">Ольга Репина</h3>
                 <p class="teams-profes">Frontend Developer</p>
@@ -281,12 +417,27 @@
               </div>
             </li>
             <li class="teams-item">
-              <img
-                src="./images/nickolay.jpg"
-                width="270"
-                height="260"
-                alt=""
-              />
+              <picture>
+                <source
+                  srcset="./images/nickolay.jpg 1x, ./images/nickolay@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/nickolay2.jpg    1x,
+                    ./images/tablet/nickolay2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/nickolay3.jpg    1x,
+                    ./images/mobile/nickolay3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team-picture" src="./images/nickolay.jpg" alt="" />
+              </picture>
               <div class="teams-view">
                 <h3 class="teams-title">Николай Тарасов</h3>
                 <p class="teams-profes">Marketing</p>
@@ -349,7 +500,27 @@
               </div>
             </li>
             <li class="teams-item">
-              <img src="./images/mikhail.jpg" width="270" height="260" alt="" />
+              <picture>
+                <source
+                  srcset="./images/mikhail.jpg 1x, ./images/mikhail@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/mikhail2.jpg    1x,
+                    ./images/tablet/mikhail2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mikhail3.jpg    1x,
+                    ./images/mobile/mikhail3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img class="team-picture" src="./images/mikhail.jpg" alt="" />
+              </picture>
               <div class="teams-view">
                 <h3 class="teams-title">Михаил Ермаков</h3>
                 <p class="teams-profes">UI Designer</p>
@@ -507,7 +678,7 @@
     <footer class="footer">
       <div class="container footer-flex">
         <div class="footer-box">
-          <a href="./index.html" class="box-size log-ty-fonts"
+          <a href="./index.html" class="log-ty-fonts"
             ><span class="logo">Web</span
             ><span class="white-logo">Studio</span></a
           >
@@ -531,9 +702,9 @@
             </ul>
           </address>
         </div>
-        <div class="footer-box">
+        <div class="footer-social">
           <span class="footer-color">Присоединяйтесь</span>
-          <ul class="social list box-size">
+          <ul class="social list box-size social-list-icons">
             <li class="social-item">
               <a
                 href="#"
@@ -585,7 +756,7 @@
 
         <form class="form-footer" autocomplete="off">
           <p class="footer-color">Подпишитесь на рассылку</p>
-          <div class="footer-flex">
+          <div class="footer-form-flex">
             <lable>
               <input
                 class="footer-form-input"
@@ -593,6 +764,7 @@
                 placeholder="E-mail"
               />
             </lable>
+
             <button class="hero-btn hero-form-btn" type="submit">
               Подписаться
               <svg class="footer-form-icon" width="24" height="24">
@@ -650,7 +822,7 @@
             <svg class="checkbox-icon" width="16" height="15">
               <use href="./images/symbol-defs.svg#icon-check"></use>
             </svg>
-            <span
+            <span class="form-modal-fonts"
               >Соглашаюсь с рассылкой и принимаю
               <a href="#" class="forms-lable-checkbox"
                 >Условия договора</a
@@ -664,6 +836,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
     <script>
       (() => {

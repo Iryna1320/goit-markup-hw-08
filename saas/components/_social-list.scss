@@ -1,6 +1,10 @@
 .social-list-icons {
   display: flex;
   justify-content: center;
+
+  @include for-size(desktop) {
+    justify-content: left;
+  }
 }
 
 .social-link-icons {

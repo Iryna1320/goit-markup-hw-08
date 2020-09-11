@@ -1,23 +1,24 @@
-/*.no-padding {
+@media screen and (max-width: 1199px) {
+  .display {
+    display: none;
+  }
+}
+
+.no-padding {
   padding-top: 0;
-}*/
+}
 
-/*.work {
+.work {
   display: flex;
-}*/
-
-/*img {
-  display: block;
-  max-width: 100%;
-}*/
+}
 
 .work-list {
   position: relative;
-  /*width: calc((100% - 2 * 30px) / 3);*/
+  width: calc((100% - 2 * 30px) / 3);
 
-  /* &:not(:last-child) {
+  &:not(:last-child) {
     margin-right: 30px;
-  }*/
+  }
 }
 
 .work-title {

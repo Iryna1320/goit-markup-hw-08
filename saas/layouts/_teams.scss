@@ -1,30 +1,41 @@
-/*.teams {
-  display: flex;
-}*/
-
-.teams-container {
-  padding-right: 0;
-  padding-left: 0;
-}
-
 .teams-color {
   background: #f5f4fa;
 }
 
+@include for-size(tablet-landscape) {
+  .teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+}
+
 .teams-item {
-  /*width: calc((100% - 3 * 30px) / 4);*/
   background: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  /*width: 100%;*/
 
   &:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
+}
 
-  /*&:not(:last-child) {
-    margin-right: 30px;
-  }*/
+@include for-size(tablet-landscape) {
+  .teams-item {
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+
+    @include for-size(desktop) {
+      flex-basis: calc((100% - 8 * 15px) / 4);
+      /*&:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }*/
+    }
+  }
 }
 
 .teams-view {
@@ -51,4 +62,11 @@
   margin-bottom: 16px;
   @include font(400, 16px, 1.19);
   letter-spacing: 0.03em;
+}
+
+@include for-size(tablet) {
+  .team-picture {
+    margin-bottom: 30px;
+    width: 100%;
+  }
 }
