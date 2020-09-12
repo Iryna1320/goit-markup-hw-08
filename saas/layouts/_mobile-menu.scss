@@ -34,6 +34,7 @@
 
 .mobile-menu-nav-link {
   position: relative;
+  padding-bottom: 8px;
   font-style: normal;
   @include font(500, 18px, 1.17);
   letter-spacing: 0.02em;
@@ -84,9 +85,6 @@
 .mobile-menu-nav-link.current {
   color: $accent-color;
 }
-
-/*.mobile-menu-contacts {
-}*/
 
 .mobile-menu-contacts-mr:not(:last-child) {
   margin-bottom: 16px;

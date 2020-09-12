@@ -1,34 +1,31 @@
-.features {
-  margin-right: auto;
-
-  @include for-size(tablet-landscape) {
+@media screen and (min-width: 768px) {
+  .features {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
 
-    @include for-size(desktop) {
+    @media screen and (min-width: 1200px) {
       flex-wrap: nowrap;
       align-items: flex-start;
     }
   }
 }
 
-.features-list:not(:last-child) {
-  margin-bottom: 30px;
-}
+.features-list {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 
-@include for-size(tablet-landscape) {
-  .features-list {
-    flex-basis: calc((100% - 4 * 15px) / 2);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 
-  @include for-size(desktop) {
-    flex-basis: calc((100% - 8 * 15px) / 4);
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
   }
 }
 
@@ -36,7 +33,6 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /*width: 270px;*/
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
